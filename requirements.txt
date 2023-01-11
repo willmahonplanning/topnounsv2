@@ -6,3 +6,4 @@ Flask_CORS==3.0.9
 NLTK==3.5
 Jinja2==2.11.2
 Pytest==5.4.3
+gunicorn==20.1.0
