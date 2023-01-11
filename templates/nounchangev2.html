@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Noun Detector</title>
-</head>
-<body>
-  <h1> Topnouns Text Converter </h1>
- <form method="post" action="{{ url_for('noun_detector') }}">
-    <textarea name="input_string"></textarea>
-    <input type="submit" value="Submit">
-  </form>
-  {% if modified_string %}
-    <textarea disabled>{{ modified_string }}</textarea>
-  {% endif %}
-</body>
+  <head>
+    <title>Noun Detector</title>
+  </head>
+  <body>
+    <h1>Noun Detector</h1>
+    <form method="post" action="{{ url_for('noun_detector') }}">
+      <label for="input_string">Enter a sentence:</label><br>
+      <textarea name="input_string" id="input_string"></textarea><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    {% if modified_string %}
+      <label for="output_string">Modified sentence:</label><br>
+      <textarea name="output_string" id="output_string" readonly>{{ modified_string }}</textarea>
+    {% endif %}
+  </body>
 </html>
