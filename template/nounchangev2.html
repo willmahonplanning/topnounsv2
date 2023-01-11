@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Topnouns</title>
+</head>
+<body>
+  <form method="post" action="{{ url_for('noun_detector') }}">
+    <label for="input_text">Enter a sentence:</label>
+    <br>
+    <textarea id="input_text" name="input_text"></textarea>
+    <br>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+  <br>
+  <p id="output"></p>
+</body>
+</html>
