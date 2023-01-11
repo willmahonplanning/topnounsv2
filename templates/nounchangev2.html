@@ -5,12 +5,12 @@
 </head>
 <body>
   <h1> Topnouns Text Converter </h1>
-  <form method="post" action="{{ url_for('noun_detector') }}">
+ <form method="post" action="{{ url_for('noun_detector') }}">
     <textarea name="input_string"></textarea>
     <input type="submit" value="Submit">
   </form>
   {% if modified_string %}
-    <p>Modified string: {{ modified_string }}</p>
+    <textarea disabled>{{ modified_string }}</textarea>
   {% endif %}
 </body>
 </html>
