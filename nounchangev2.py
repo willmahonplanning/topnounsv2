@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from textblob import TextBlob
+import nltk
+nltk.download('punkt')
 
 app = Flask(__name__)
 
