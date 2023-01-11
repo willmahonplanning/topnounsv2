@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Noun Detector</title>
+</head>
+<body>
+  <form method="post" action="{{ url_for('noun_detector') }}">
+    <textarea name="input_string"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+  {% if modified_string %}
+    <p>Modified string: {{ modified_string }}</p>
+  {% endif %}
+</body>
+</html>
